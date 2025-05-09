@@ -100,3 +100,34 @@ nav a:hover {
     transform: translateY(0);
   }
 }
+
+.Paragraphs-Container {
+  padding: 5px 100px;
+}
+.two-Columns-Format {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* On smaller screens, stack the columns */
+@media (max-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: 1fr; /* one column */
+  }
+}
+
+.grid-item {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.grid-item img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centers the image inside the column */
+}

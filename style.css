@@ -1,4 +1,4 @@
-/* Add basic styling in a separate style.css file */
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -6,44 +6,20 @@ body {
   padding: 0;
   background: rgba(255, 255, 255);
 }
-header {
-  background: rgb(5, 7, 7); /* black with 80% opacity */
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
 
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  
-}
-
-.sticky-nav {
-  position: sticky;
-  top: 0;
-  background-color: rgb(5, 7, 7);
-  z-index: 1000;
-  text-align: center;
-}
-
-
-/* main {
-  padding: 2rem;
-} */
 img {
   max-width: 100%;
   height: auto;
-} 
-.banner-image {
-  width: 100%;         /* Full width of screen */
-  height: auto;        /* Maintain aspect ratio */
-  display: block;      /* Removes small gaps */
-  object-fit: cover;   /* Ensures it covers the space nicely if you add a fixed height */
-  margin: 0;
-  padding: 0;
+  display: block;
 }
+
+/* Header & Banner */
+header {
+  background: rgb(5, 7, 7);
+  color: white;
+  text-align: center;
+}
+
 .banner-wrapper {
   width: 100%;
   height: 280px;
@@ -54,7 +30,28 @@ img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  object-position: center; /* or top / bottom */
+  object-position: center;
+}
+
+/* Navigation Bar */
+nav {
+  text-align: center;
+  background-color: rgb(5, 7, 7);
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 10px 5px;
+  font-size: 1em;
+  display: inline-block;
 }
 
 nav a:hover {
@@ -62,38 +59,34 @@ nav a:hover {
   border-bottom: 2px solid #fcd116;
 }
 
-
-
+/* Image with Overlay Text */
 .image-text-container {
   position: relative;
-  display: inline-block; /*Makes it fit tightly to image size*/
-  width: 100%; 
+  display: inline-block;
+  width: 100%;
 }
+
 .image-text-container img {
-  width: 100%; /* Makes image responsive */
+  width: 100%;
   height: auto;
-  display: block;
 }
+
 .text-overlay {
   position: absolute;
   top: 20%;
-  bottom: 50%; /* Adjust position over image */
   left: 20px;
   right: 70%;
-  background-color: rgba(0, 0, 0, 0.8); /* Black with 60% transparency */
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 20px;
   border-radius: 8px;
   max-width: 90%;
   font-size: 1.4em;
-
-  /* Animation setup */
   opacity: 0;
   transform: translateY(40px);
   animation: fadeInSlideUp 1.2s ease-out forwards;
 }
 
-/* Animation keyframes */
 @keyframes fadeInSlideUp {
   to {
     opacity: 1;
@@ -101,21 +94,16 @@ nav a:hover {
   }
 }
 
+/* Columns */
 .Paragraphs-Container {
-  padding: 5px 100px;
-}
-.two-Columns-Format {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns */
-  gap: 20px;
-  padding: 20px;
+  padding: 20px 100px;
 }
 
-/* On smaller screens, stack the columns */
-@media (max-width: 768px) {
-  .responsive-grid {
-    grid-template-columns: 1fr; /* one column */
-  }
+.two-Columns-Format {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .grid-item {
@@ -128,6 +116,29 @@ nav a:hover {
   max-width: 300px;
   width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto; /* centers the image inside the column */
+  margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .two-Columns-Format {
+    grid-template-columns: 1fr;
+  }
+
+  .text-overlay {
+    left: 10px;
+    right: 10px;
+    top: 10%;
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  .Paragraphs-Container {
+    padding: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
 }

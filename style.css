@@ -142,3 +142,44 @@ nav a:hover {
     margin: 10px 0;
   }
 }
+
+
+
+
+
+.map-switcher-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.map-buttons {
+  margin-bottom: 20px;
+}
+
+.map-buttons button {
+  margin: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #fcd116;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.map-buttons button:hover {
+  background-color: #ffd700;
+}
+
+.map-images img.map {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}

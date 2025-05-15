@@ -23,3 +23,58 @@
     transform: translateY(0);
   }
 }
+
+
+
+/* General container for the map section */
+.map-switcher-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Button styles */
+.map-buttons button {
+  margin: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #fcd116;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Hover state */
+.map-buttons button:hover {
+  background-color: #ffd700;
+}
+
+/* Active button highlight */
+.active-map-btn {
+  background-color: #003893;
+  color: white;
+}
+
+/* Map image display */
+.map {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.map.hidden {
+  display: none !important;
+}
+
+.map {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+

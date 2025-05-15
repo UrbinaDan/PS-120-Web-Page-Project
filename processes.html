@@ -14,14 +14,15 @@
         <img src="Images/ColombiaBanner-01.png" alt="Colombian Banner">
     </div>
   </header>
-  <nav class="sticky-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="processes.html">Geographic Processes</a>
-      <a href="references.html">References</a>
-  </nav>
-  <main>
 
+  <nav class="sticky-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="processes.html">Geographic Processes</a>
+    <a href="references.html">References</a>
+  </nav>
+
+  <main>
     <div class="image-text-container">
       <img src="Images/NevadoDelRuizVolcano.webp" alt="NevadoDelRuiz">
       <div class="text-overlay">
@@ -38,10 +39,26 @@
           <li>Rainfall patterns and climate influence vegetation and agriculture.</li>
         </ul>
       </div>
-
     </div>
 
-    
+    <section class="map-switcher-section">
+      <h2>Interactive Maps of Colombia</h2>
+      <div class="map-buttons">
+        <button onclick="showMap('map1', this)">Ancient Map</button>
+        <button onclick="showMap('map2', this)">Modern Political Map</button>
+        <button onclick="showMap('map3', this)">Latitude & Longitude</button>
+        <button onclick="showMap('map4', this)">Trade Routes</button>
+      </div>
+
+      <div class="map-images">
+        <img id="map1" class="map" src="Images/processesImages/GranColombia.jpg" alt="Ancient Map">
+        <img id="map2" class="map hidden" src="Images/processesImages/ColombianPoliticalMap.jpeg" alt="Modern political Map">
+        <img id="map3" class="map hidden" src="Images/processesImages/Colombia-lat-long.jpg" alt="Latitude and Longitude Map">
+        <img id="map4" class="map hidden" src="Images/processesImages/GranColombia.jpg" alt="">
+      </div>
+    </section>
   </main>
+
+  <script src="processesscript.js"></script>
 </body>
 </html>

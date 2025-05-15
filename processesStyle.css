@@ -1,13 +1,69 @@
-.text-overlay-two {
+.text-overlay-three {
   position: absolute;
-  top: 50%; /* Position vertically lower */
+  top: 10%;
+  left: 100px;
+  right: 60%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  font-size: 1em;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSlideUp 1.2s ease-out forwards;
+}
+
+.text-overlay-four {
+  position: absolute;
+  top: 10%; /* Position vertically lower */
   left: 60%;
   right: 10%; /* Keep it left-aligned */
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 20px;
   border-radius: 8px;
-  font-size: 1.2em;
+  font-size: 0.8em;
+  max-width: 90%;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(80px);
+  animation: fadeInSlideUpTwo 1.2s ease-out forwards;
+}
+
+
+
+.text-overlay-two {
+  position: absolute;
+  top: 43%; /* Position vertically lower */
+  left: 60%;
+  right: 10%; /* Keep it left-aligned */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.8em;
+  max-width: 90%;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(80px);
+  animation: fadeInSlideUpTwo 1.2s ease-out forwards;
+}
+
+
+
+.text-overlay-one {
+  position: absolute;
+  top: 70%; /* Position vertically lower */
+  left: 60%;
+  right: 10%; /* Keep it left-aligned */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.8em;
   max-width: 90%;
 
   /* Animation */
@@ -78,3 +134,22 @@
   transition: opacity 0.4s ease;
 }
 
+.map-container {
+  display: none;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.map-container.active {
+  display: block;
+}
+
+.map-desc {
+  margin-top: 10px;
+  font-size: 1em;
+  background-color: #f8f8f8;
+  padding: 10px 15px;
+  border-left: 4px solid #003893;
+  border-radius: 4px;
+}

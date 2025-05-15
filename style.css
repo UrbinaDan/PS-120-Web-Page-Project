@@ -71,21 +71,6 @@ nav a:hover {
   height: auto;
 }
 
-.text-overlay {
-  position: absolute;
-  top: 20%;
-  left: 20px;
-  right: 70%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 90%;
-  font-size: 1.4em;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInSlideUp 1.2s ease-out forwards;
-}
 
 @keyframes fadeInSlideUp {
   to {
@@ -182,4 +167,20 @@ nav a:hover {
 
 .hidden {
   display: none;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  right: 70%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  font-size: 1.4em;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSlideUp 1.2s ease-out forwards;
 }

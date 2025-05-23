@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="processesStyle.css">
 </head>
 <body>
   <header>
@@ -20,6 +21,89 @@
       <a href="references.html">References</a>
   </nav>
   <main>
+
+
+    
+    <section class="map-switcher-section">
+      <h2>Interactive Maps of Colombia</h2>
+      <div class="map-buttons">
+        <button onclick="showMap('map1', this)">Ancient Map</button>
+        <button onclick="showMap('map2', this)">Modern Political Map</button>
+        <button onclick="showMap('map3', this)">Latitude & Longitude</button>
+        <button onclick="showMap('map4', this)">Independation War Route</button>
+      </div>
+
+      <div class="map-images">
+  <div class="map-container">
+    <img id="map1" class="map" src="Images/processesImages/GranColombia.jpg" alt="Ancient Map">
+    <div id="desc1" class="map-desc">This ancient map represents Gran Colombia, showing historical territorial claims and borders from the early 1800s.</div>
+  </div>
+
+  <div class="map-container hidden">
+    <img id="map2" class="map" src="Images/processesImages/ColombianPoliticalMap.jpeg" alt="Modern Political Map">
+    <div id="desc2" class="map-desc">This is the modern political map of Colombia, displaying departments and major cities.</div>
+  </div>
+
+  <div class="map-container hidden">
+    <img id="map3" class="map" src="Images/processesImages/Colombia-lat-long.jpg" alt="Latitude and Longitude Map">
+    <div id="desc3" class="map-desc">This map shows Colombia's latitude and longitude lines, helping understand its equatorial location.</div>
+  </div>
+
+  <div class="map-container hidden">
+    <img id="map4" class="map" src="Images/processesImages/MartinBolivar.jpg" alt="San Martin and Bolivar war route">
+    <div id="desc4" class="map-desc">A depiction of independence war routes led by Simón Bolívar and José de San Martín across South America.</div>
+  </div>
+</div>
+
+    </section>
+
+
+
+    <div class="image-text-container">
+          <img src="Images/NevadoDelRuizVolcano.webp" alt="NevadoDelRuiz">
+          <div class="text-overlay-one">
+            <h2>Continent and General Location</h2>
+            <ul>
+              <li>Colombia is located on the continent of South America, in the northwestern corner of the continent. It borders the Caribbean Sea to the north and the Pacific Ocean to the west, sharing land borders with Panama, Venezuela, Brazil, Peru, and Ecuador.</li>
+            </ul>
+          </div>
+
+          <div class="text-overlay-two">
+            <h2>Latitudinal Range</h2>
+            <ul>
+              <li>Colombia lies between approximately 12°N and 4°S latitude, straddling the Equator, which contributes to its tropical climate and biodiversity. Its longitudinal range is roughly 67°W to 79°W.</li>
+            </ul>
+          </div>
+        
+
+        <div class="text-overlay-four">
+            <h2>Historical Timeline</h2>
+            <ul>
+              <li>The Republic of Colombia was officially established in 1810 following its independence movement from Spanish colonial rule. Before that, it was part of the Viceroyalty of New Granada (established in 1717 under Spanish rule). The modern nation of Colombia emerged after the dissolution of Gran Colombia in 1831, which had included Venezuela, Ecuador, and Panama.</li>
+            </ul>
+          </div>
+        
+    
+        <div class="text-overlay-three">
+            <h2>Famous Cartographers and Influence on Mapping</h2>
+            <p>Although Colombia does not have many internationally famous cartographers from its early post-colonial period, the country was heavily influenced by European explorers and mapmakers during the colonial era.</p>
+            <h3>Agustín Codazzi (1793–1859)</h3>
+            <p>One of the most influential cartographers in Colombian history was Giovanni Battista Agustín Codazzi, an Italian geographer and cartographer who worked in Colombia during the 19th century.</p>
+            <ul>
+              <li>He is best known for conducting the first official geographic and statistical survey of Colombia, known as the “Atlas Geográfico e Histórico de la República de Colombia”.</li>
+              <li>Codazzi played a key role in founding the National Geographic Institute of Colombia, which was later named in his honor.</li>
+              <li>His work laid the foundations for modern cartography and regional planning in Colombia.</li>
+            </ul>
+          </div>
+    </div>
+    </div>
+
+    </div>
+
+
+
+
+
     <div class="Paragraphs-Container">
       <div class="two-Columns-Format">
         <div class="grid-item">
@@ -52,5 +136,6 @@
 
     </div>
   </main>
+  <script src="processesscript.js"></script>
 </body>
 </html>

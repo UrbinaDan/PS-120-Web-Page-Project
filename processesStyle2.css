@@ -1,0 +1,233 @@
+section {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #003893;
+  margin-top: 40px;
+}
+
+    h2 {
+      text-align: center;
+      color: #003893;
+    }
+
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 400px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* .bar {
+      width: 80px;
+      background: #fcd116;
+      border-radius: 5px 5px 0 0;
+      position: relative;
+      transition: height 1s ease-out;
+    } */
+
+.bar {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, #ff4500, #ff6347, #ffa07a, #ffd1a4);
+  border-radius: 5px 5px 0 0;
+  transition: height 2s ease-out;
+  position: relative;
+
+  box-shadow:
+    0 0 12px 2px rgba(255, 85, 0, 0.6),
+    0 0 24px 8px rgba(255, 50, 0, 0.3),
+    inset 0 0 14px rgba(255, 99, 71, 0.9);
+
+  animation: glowLava 1.5s infinite ease-in-out;
+}
+
+
+
+    .bar span {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .label {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .labelShort {
+      text-align: center;
+      margin-top: 35px;
+      font-size: 14px;
+    }
+
+.volcano-chart-section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 840px;
+  margin: 40px auto;
+  max-height: 500px;
+}
+
+.y-axis-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  margin-right: 10px;
+  font-weight: bold;
+  color: #003893;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 400px;
+  width: 800px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80px;
+  height: 100%;
+  position: relative;
+}
+
+.value-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #003893;
+  margin-bottom: 5px;
+}
+
+.bar {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, #ff4500, #ff6347, #ffa07a);
+  border-radius: 5px 5px 0 0;
+  transition: height 2s ease-out;
+  box-shadow: inset 0 0 10px #ff6347;
+  position: relative;
+}
+
+.label {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  width: 100%;
+  min-height: 2.5em; /* Ensures all labels have equal space */
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 110%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.bar-container:hover .tooltip {
+  opacity: 1;
+}
+
+@keyframes glowLava {
+  0% {
+    box-shadow:
+      0 0 4px 1px rgba(255, 85, 0, 0.4),
+      0 0 10px 2px rgba(255, 50, 0, 0.15),
+      inset 0 0 4px rgba(255, 99, 71, 0.6);
+    transform: scaleY(1);
+  }
+  50% {
+    box-shadow:
+      0 0 16px 4px rgba(255, 85, 0, 0.5),
+      0 0 24px 8px rgba(255, 50, 0, 0.25),
+      inset 0 0 12px rgba(255, 140, 0, 0.9);
+    transform: scaleY(1.015); /* ← subtle pulsing (was 1.05) */
+  }
+  100% {
+    box-shadow:
+      0 0 4px 1px rgba(255, 85, 0, 0.4),
+      0 0 10px 2px rgba(255, 50, 0, 0.15),
+      inset 0 0 4px rgba(255, 99, 71, 0.6);
+    transform: scaleY(1);
+  }
+}
+
+
+.two-column-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.text-column {
+  padding-right: 10px;
+}
+
+.image-column img,
+.image-column iframe {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .two-column-section {
+    grid-template-columns: 1fr;
+  }
+  .text-column {
+    padding-right: 0;
+  }
+}
+
+.media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}

@@ -11,7 +11,7 @@ h2 {
 
     h2 {
       text-align: center;
-      color: #003893;
+      color: #ffffff;
     }
 
     .bar-chart {
@@ -209,7 +209,7 @@ h2 {
 
 .image-column img,
 .image-column iframe {
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -231,3 +231,48 @@ h2 {
   text-align: center;
   padding: 40px 20px;
 }
+
+.enhanced-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: white;
+  
+}
+
+.enhanced-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+.enhanced-section .content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.enhanced-section .text-column,
+.enhanced-section .image-column {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.zoom-hover img {
+  transition: transform 0.5s ease;
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.zoom-hover img:hover {
+  transform: scale(1.05);
+}
+
+/* AOS base animations already handled by CDN */

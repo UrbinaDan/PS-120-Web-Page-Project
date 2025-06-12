@@ -18,7 +18,9 @@ header {
   background: rgb(5, 7, 7);
   color: white;
   text-align: center;
+
 }
+
 
 .banner-wrapper {
   width: 100%;
@@ -184,3 +186,10 @@ nav a:hover {
   transform: translateY(40px);
   animation: fadeInSlideUp 1.2s ease-out forwards;
 }
+
+    footer {
+      background: #000000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
